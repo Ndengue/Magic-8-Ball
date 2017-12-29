@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class ViewController: UIViewController {
     
     
@@ -20,8 +17,7 @@ class ViewController: UIViewController {
     
     let imageArray = ["ball1", "ball2", "ball3", "ball4", "ball5"]
     
-    
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,9 +29,6 @@ class ViewController: UIViewController {
         
     }
 
-
-    
-    
     @IBAction func askMePressd(_ sender: UIButton) {
         
         
