@@ -45,9 +45,6 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-    
     func imageRandomizer() {
         
         randomImage = Int (arc4random_uniform(5))
@@ -55,9 +52,5 @@ class ViewController: UIViewController {
         print(randomImage)
         
     }
-
-
-
-
 }
 
