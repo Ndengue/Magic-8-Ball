@@ -8,17 +8,62 @@
 
 import UIKit
 
+
+
+
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var magicBall: UIImageView!
+    
+    var randomImage : Int = 0
+    
+    let imageArray = ["ball1", "ball2", "ball3", "ball4", "ball5"]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        imageRandomizer()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
+
+
+    
+    
+    @IBAction func askMePressd(_ sender: UIButton) {
+        
+        
+        imageRandomizer()
+        
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            
+              imageRandomizer()
+            
+        }
+        
+    }
+    
+    
+    
+    
+    func imageRandomizer() {
+        
+        randomImage = Int (arc4random_uniform(5))
+        magicBall.image = UIImage (named: imageArray[randomImage])
+        print(randomImage)
+        
+    }
+
+
 
 
 }
